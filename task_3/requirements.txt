@@ -1,0 +1,10 @@
+torch>=2.3          # GPU (A100) recommended
+timm>=1.0
+numpy>=1.24
+requests>=2.28      # submit.py
+# only for building the retain pools
+diffusers>=0.30     # gen_pool.py (SD-Turbo)
+transformers>=4.45
+pillow
+pyarrow             # prepare_external.py (mini-ImageNet parquet)
+huggingface_hub

@@ -1,0 +1,8 @@
+# data / models / outputs stay on the cluster, never in git
+*.pt
+*.pth
+*.npz
+output/
+__pycache__/
+.venv/
+.env
