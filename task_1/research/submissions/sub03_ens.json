@@ -1,0 +1,175 @@
+{
+  "name": "sub03_ens",
+  "created_utc": "2026-11-21T18:57:12Z",
+  "commit": "2e323a4352b6edb69381c3eac213f5048f657c91",
+  "code_dirty": false,
+  "methods": {
+    "pixelseal": {
+      "source": "segmenter_ensemble",
+      "members": [
+        {
+          "encoder": "wm:pixelseal",
+          "checkpoint": "outputs/jureca_ckpt/outputs/heavy1/pixelseal_wm_s1/best.pt",
+          "sha256": "5c9ab8f5e3835b71d0882469ca6d1005f6d607a6891e05d89413a52093be3698",
+          "train_args": {
+            "method": "pixelseal",
+            "data": "release",
+            "out": "outputs/heavy1/pixelseal_wm_s1",
+            "coco": ".downloads/coco/val2017",
+            "ann": ".downloads/coco/annotations/instances_val2017.json",
+            "pool": 3000,
+            "steps": 20000,
+            "batch": 48,
+            "real_per_batch": 8,
+            "extra_dir": "outputs/coco_augmented",
+            "extra_per_batch": 16,
+            "post_augment_prob": 0.0,
+            "lr": 0.0001,
+            "encoder": "wm:pixelseal",
+            "val_fold": 0,
+            "eval_every": 1000,
+            "no_compile": false,
+            "seed": 1
+          }
+        },
+        {
+          "encoder": "wm:pixelseal",
+          "checkpoint": "outputs/jureca_ckpt/outputs/heavy1/pixelseal_wm/best.pt",
+          "sha256": "130cea107aa3611a4c0f0db26ea4144671e295d5d788702de85dfcea2d367c54",
+          "train_args": {
+            "method": "pixelseal",
+            "data": "release",
+            "out": "outputs/heavy1/pixelseal_wm",
+            "coco": ".downloads/coco/val2017",
+            "ann": ".downloads/coco/annotations/instances_val2017.json",
+            "pool": 3000,
+            "steps": 20000,
+            "batch": 48,
+            "real_per_batch": 8,
+            "extra_dir": "outputs/coco_augmented",
+            "extra_per_batch": 16,
+            "post_augment_prob": 0.0,
+            "lr": 0.0001,
+            "encoder": "wm:pixelseal",
+            "val_fold": 0,
+            "eval_every": 1000,
+            "no_compile": false,
+            "seed": 0
+          }
+        },
+        {
+          "encoder": "wm:pixelseal",
+          "checkpoint": "outputs/jureca_ckpt/outputs/wm_jureca_15901844/pixelseal_wm_s1/best.pt",
+          "sha256": "3175a2011abdf76650977537732da1d02df892756e6b30b280166ab034a51094"
+        }
+      ],
+      "fold0_miou": 0.5962467770940515,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.49369093951056986
+    },
+    "trustmark": {
+      "source": "segmenter_ensemble",
+      "members": [
+        {
+          "encoder": "resnet50",
+          "checkpoint": "outputs/jureca_ckpt/outputs/heavy1/trustmark_resnet50/best.pt",
+          "sha256": "e5d6e9088d54bdb6c049ea1207183924fd331eba9203199dce6c87fad02c3375",
+          "train_args": {
+            "method": "trustmark",
+            "data": "release",
+            "out": "outputs/heavy1/trustmark_resnet50",
+            "coco": ".downloads/coco/val2017",
+            "ann": ".downloads/coco/annotations/instances_val2017.json",
+            "pool": 3000,
+            "steps": 20000,
+            "batch": 48,
+            "real_per_batch": 8,
+            "extra_dir": "outputs/coco_augmented",
+            "extra_per_batch": 16,
+            "post_augment_prob": 0.0,
+            "lr": 0.0004,
+            "encoder": "resnet50",
+            "val_fold": 0,
+            "eval_every": 1000,
+            "no_compile": false,
+            "seed": 0
+          }
+        },
+        {
+          "encoder": "resnet50",
+          "checkpoint": "outputs/jureca_ckpt/outputs/seg_v2_jureca/trustmark_resnet50/best.pt",
+          "sha256": "3670e87dd306c93c8288ea4b080713d158ff002248fe3cb57b057b459e55a6ce"
+        },
+        {
+          "encoder": "wm:trustmark",
+          "checkpoint": "outputs/jureca_ckpt/outputs/wm_jureca_15901844/trustmark_wm/best.pt",
+          "sha256": "ad8650bcc4c406ab713b76144ed3f6acaa36df3228e03b88126954bd573ddbaf"
+        }
+      ],
+      "fold0_miou": 0.6642153794049,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.4952292049632353
+    },
+    "stegastamp": {
+      "source": "segmenter_ensemble",
+      "members": [
+        {
+          "encoder": "resnet50",
+          "checkpoint": "outputs/jureca_ckpt/outputs/heavy1/stegastamp_resnet50/best.pt",
+          "sha256": "4dec06d6c15c1b24b51c94ddc410ed5f8ceea8a9647a51b7bf39fe619acbd9dd",
+          "train_args": {
+            "method": "stegastamp",
+            "data": "release",
+            "out": "outputs/heavy1/stegastamp_resnet50",
+            "coco": ".downloads/coco/val2017",
+            "ann": ".downloads/coco/annotations/instances_val2017.json",
+            "pool": 3000,
+            "steps": 20000,
+            "batch": 48,
+            "real_per_batch": 8,
+            "extra_dir": "outputs/coco_augmented",
+            "extra_per_batch": 16,
+            "post_augment_prob": 0.0,
+            "lr": 0.0004,
+            "encoder": "resnet50",
+            "val_fold": 0,
+            "eval_every": 1000,
+            "no_compile": false,
+            "seed": 0
+          }
+        },
+        {
+          "encoder": "resnet34",
+          "checkpoint": "outputs/jureca_ckpt/outputs/seg_v2_jureca/stegastamp/best.pt",
+          "sha256": "725b9bf2d45712403d122a8e5d293755cebafd41204688472a0e494a46960ed5"
+        }
+      ],
+      "fold0_miou": 0.8289511079803368,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.48280316521139705
+    }
+  },
+  "file": {
+    "path": "outputs/submissions/sub03_ens.pt",
+    "images": 1020,
+    "bytes": 16734630,
+    "watermarked_fraction": 0.490574449300766,
+    "sha256": "8a67ca90144e9fb16391081af7b59f84d3010a5fe0ead52b751393d3cb8d8311"
+  },
+  "fold0_miou_mean": 0.6964710881597628,
+  "leaderboard": {
+    "submission_id": 1400,
+    "public_score": 0.6878,
+    "response": {
+      "submission_id": 1400,
+      "status": "success",
+      "score": 0.6878,
+      "previous_best": 0.6502,
+      "delta": 0.0376,
+      "improved": true,
+      "message": "New best on this task. Score shown is on the public split; the final ranking uses the held out subset, revealed after submissions close."
+    },
+    "task": "34-watermark-localisation-image",
+    "submitted_utc": "2026-11-21T18:57:44Z"
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "pixelseal": {
+    "crop_decode": {
+      "bbox_all": {
+        "n": 78,
+        "mean": 0.6537960737179487,
+        "share_ge_0.9": 0.16666666666666666
+      },
+      "bbox_exact_rectangle": {
+        "n": 36,
+        "mean": 0.7293836805555556,
+        "share_ge_0.9": 0.2777777777777778
+      },
+      "bbox_irregular": {
+        "n": 42,
+        "mean": 0.5890066964285714,
+        "share_ge_0.9": 0.07142857142857142
+      },
+      "random_same_size": {
+        "n": 78,
+        "mean": 0.5396634615384616,
+        "share_ge_0.9": 0.038461538461538464
+      }
+    },
+    "template": {
+      "auc_mean": 0.4927930912998351,
+      "auc_bg_clean": 0.49040239665511004,
+      "auc_bg_marked": 0.4951837859445602
+    },
+    "sim_to_real": {
+      "images": 60,
+      "seconds": 34.3,
+      "polarity": {
+        "bit_acc": {
+          "auc_full_watermark": 1.0,
+          "best_threshold_accuracy": 1.0
+        },
+        "agreement": {
+          "auc_full_watermark": 1.0,
+          "best_threshold_accuracy": 1.0
+        }
+      },
+      "bit_acc_mean": {
+        "full_watermark_true": 0.9947916865348816,
+        "full_watermark_false": 0.4976562559604645
+      },
+      "constant": {
+        "all_clean": 0.24749043782552083,
+        "oracle_polarity_fill": 0.45246988932291665
+      },
+      "maps": {
+        "native_work": {
+          "auc_mean": 0.5844349444421896,
+          "auc_mean_bg_clean": 0.535581233751913,
+          "auc_mean_bg_marked": 0.6332886551324658,
+          "miou_best_global_z_threshold": 0.3088973646528846,
+          "z_threshold": 0.40000000000000036,
+          "miou_oracle_fraction": 0.46760137659417594
+        },
+        "native_512": {
+          "auc_mean": 0.6170187030263636,
+          "auc_mean_bg_clean": 0.571197259739079,
+          "auc_mean_bg_marked": 0.6628401463136481,
+          "miou_best_global_z_threshold": 0.33403575884893577,
+          "z_threshold": 0.30000000000000027,
+          "miou_oracle_fraction": 0.5047816026226882
+        },
+        "hp_energy": {
+          "auc_mean": 0.4974596293498965,
+          "auc_mean_bg_clean": 0.5264415925485124,
+          "auc_mean_bg_marked": 0.4684776661512806,
+          "miou_best_global_z_threshold": 0.28213229359716435,
+          "z_threshold": -0.19999999999999973,
+          "miou_oracle_fraction": 0.45046294524500446
+        },
+        "occlusion": {
+          "auc_mean": 0.6141219327037181,
+          "auc_mean_bg_clean": 0.5092896525318643,
+          "auc_mean_bg_marked": 0.7189542128755717,
+          "miou_best_global_z_threshold": 0.2931130585303009,
+          "z_threshold": -1.0,
+          "miou_oracle_fraction": 0.48409553798666444
+        }
+      }
+    },
+    "sim_crop_decode": {
+      "bbox_all": {
+        "n": 28,
+        "mean": 0.7788783482142857,
+        "share_ge_0.9": 0.2857142857142857
+      },
+      "bbox_exact_rectangle": {
+        "n": 13,
+        "mean": 0.6911057692307693,
+        "share_ge_0.9": 0.15384615384615385
+      },
+      "bbox_irregular": {
+        "n": 15,
+        "mean": 0.8549479166666667,
+        "share_ge_0.9": 0.4
+      },
+      "random_same_size": {
+        "n": 28,
+        "mean": 0.5283203125,
+        "share_ge_0.9": 0.03571428571428571
+      }
+    },
+    "seconds": 43.0
+  },
+  "trustmark": {
+    "crop_decode": {
+      "bbox_all": {
+        "n": 85,
+        "mean": 0.7262352852260365,
+        "share_ge_0.9": 0.43529411764705883
+      },
+      "bbox_exact_rectangle": {
+        "n": 43,
+        "mean": 0.9413953423500061,
+        "share_ge_0.9": 0.8604651162790697
+      },
+      "bbox_irregular": {
+        "n": 42,
+        "mean": 0.5059523695991153,
+        "share_ge_0.9": 0.0
+      },
+      "random_same_size": {
+        "n": 85,
+        "mean": 0.5107058693380917,
+        "share_ge_0.9": 0.011764705882352941
+      }
+    },
+    "template": {
+      "auc_mean": 0.49221602401849424,
+      "auc_bg_clean": 0.4802920864030475,
+      "auc_bg_marked": 0.504139961633941
+    },
+    "sim_to_real": {
+      "images": 60,
+      "seconds": 16.1,
+      "polarity": {
+        "bit_acc": {
+          "auc_full_watermark": 1.0,
+          "best_threshold_accuracy": 1.0
+        },
+        "agreement": {
+          "auc_full_watermark": 1.0,
+          "best_threshold_accuracy": 1.0
+        }
+      },
+      "bit_acc_mean": {
+        "full_watermark_true": 0.9857575297355652,
+        "full_watermark_false": 0.49703705310821533
+      },
+      "constant": {
+        "all_clean": 0.22306671142578124,
+        "oracle_polarity_fill": 0.45575103759765623
+      },
+      "maps": {
+        "native_work": {
+          "auc_mean": 0.47743888836925863,
+          "auc_mean_bg_clean": 0.33163915759972434,
+          "auc_mean_bg_marked": 0.5967295771806959,
+          "miou_best_global_z_threshold": 0.28776906824966164,
+          "z_threshold": -1.2999999999999998,
+          "miou_oracle_fraction": 0.44951315010317844
+        },
+        "native_512": {
+          "auc_mean": 0.49190810068912755,
+          "auc_mean_bg_clean": 0.4944196548739915,
+          "auc_mean_bg_marked": 0.48985319271969363,
+          "miou_best_global_z_threshold": 0.29031949059178336,
+          "z_threshold": -0.19999999999999973,
+          "miou_oracle_fraction": 0.46005322766123946
+        },
+        "hp_energy": {
+          "auc_mean": 0.5239290596164355,
+          "auc_mean_bg_clean": 0.5752054914209372,
+          "auc_mean_bg_marked": 0.4819756154127523,
+          "miou_best_global_z_threshold": 0.2929191373829697,
+          "z_threshold": -0.5999999999999996,
+          "miou_oracle_fraction": 0.45653705651869775
+        },
+        "occlusion": {
+          "auc_mean": 0.5380694307348254,
+          "auc_mean_bg_clean": 0.4819460776306768,
+          "auc_mean_bg_marked": 0.5839885378200379,
+          "miou_best_global_z_threshold": 0.29744777230620717,
+          "z_threshold": -1.0,
+          "miou_oracle_fraction": 0.46623814362370986
+        }
+      }
+    },
+    "sim_crop_decode": {
+      "bbox_all": {
+        "n": 27,
+        "mean": 0.8111110991901822,
+        "share_ge_0.9": 0.5555555555555556
+      },
+      "bbox_exact_rectangle": {
+        "n": 14,
+        "mean": 0.9114285622324262,
+        "share_ge_0.9": 0.7142857142857143
+      },
+      "bbox_irregular": {
+        "n": 13,
+        "mean": 0.7030769082216116,
+        "share_ge_0.9": 0.38461538461538464
+      },
+      "random_same_size": {
+        "n": 27,
+        "mean": 0.5444444340688211,
+        "share_ge_0.9": 0.07407407407407407
+      }
+    },
+    "seconds": 26.2
+  },
+  "stegastamp": {
+    "crop_decode": {
+      "bbox_all": {
+        "n": 82,
+        "mean": 0.6615853494987255,
+        "share_ge_0.9": 0.21951219512195122
+      },
+      "bbox_exact_rectangle": {
+        "n": 40,
+        "mean": 0.8299999788403511,
+        "share_ge_0.9": 0.45
+      },
+      "bbox_irregular": {
+        "n": 42,
+        "mean": 0.5011904644114631,
+        "share_ge_0.9": 0.0
+      },
+      "random_same_size": {
+        "n": 82,
+        "mean": 0.4954877917359515,
+        "share_ge_0.9": 0.0
+      }
+    },
+    "template": {
+      "auc_mean": 0.6609023380411755,
+      "auc_bg_clean": 0.6652165772787645,
+      "auc_bg_marked": 0.6565880988035866
+    },
+    "sim_to_real": {
+      "images": 60,
+      "seconds": 19.3,
+      "polarity": {
+        "bit_acc": {
+          "auc_full_watermark": 1.0,
+          "best_threshold_accuracy": 1.0
+        },
+        "agreement": {
+          "auc_full_watermark": 1.0,
+          "best_threshold_accuracy": 1.0
+        }
+      },
+      "bit_acc_mean": {
+        "full_watermark_true": 0.9937837719917297,
+        "full_watermark_false": 0.4978260397911072
+      },
+      "constant": {
+        "all_clean": 0.2050018310546875,
+        "oracle_polarity_fill": 0.4663462320963542
+      },
+      "maps": {
+        "hp_energy": {
+          "auc_mean": 0.55143268056635,
+          "auc_mean_bg_clean": 0.5572147541629987,
+          "auc_mean_bg_marked": 0.5478384186008654,
+          "miou_best_global_z_threshold": 0.2949981689453125,
+          "z_threshold": -3.0,
+          "miou_oracle_fraction": 0.47370433281902435
+        },
+        "occlusion": {
+          "auc_mean": 0.5116548958583931,
+          "auc_mean_bg_clean": 0.5017483828044101,
+          "auc_mean_bg_marked": 0.5178129985676255,
+          "miou_best_global_z_threshold": 0.30824444788394856,
+          "z_threshold": -1.0999999999999999,
+          "miou_oracle_fraction": 0.4632926813941483
+        }
+      }
+    },
+    "sim_crop_decode": {
+      "bbox_all": {
+        "n": 22,
+        "mean": 0.916363618590615,
+        "share_ge_0.9": 0.6818181818181818
+      },
+      "bbox_exact_rectangle": {
+        "n": 14,
+        "mean": 0.9871428396020617,
+        "share_ge_0.9": 0.9285714285714286
+      },
+      "bbox_irregular": {
+        "n": 8,
+        "mean": 0.7924999818205833,
+        "share_ge_0.9": 0.25
+      },
+      "random_same_size": {
+        "n": 22,
+        "mean": 0.5054545307701285,
+        "share_ge_0.9": 0.0
+      }
+    },
+    "seconds": 30.9
+  }
+}

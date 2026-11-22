@@ -1,0 +1,103 @@
+{
+  "name": "sub03_single",
+  "created_utc": "2026-11-21T18:55:26Z",
+  "commit": "2e323a4352b6edb69381c3eac213f5048f657c91",
+  "code_dirty": false,
+  "methods": {
+    "pixelseal": {
+      "source": "segmenter",
+      "encoder": "wm:pixelseal",
+      "checkpoint": "outputs/jureca_ckpt/outputs/heavy1/pixelseal_wm_s1/best.pt",
+      "sha256": "5c9ab8f5e3835b71d0882469ca6d1005f6d607a6891e05d89413a52093be3698",
+      "train_args": {
+        "method": "pixelseal",
+        "data": "release",
+        "out": "outputs/heavy1/pixelseal_wm_s1",
+        "coco": ".downloads/coco/val2017",
+        "ann": ".downloads/coco/annotations/instances_val2017.json",
+        "pool": 3000,
+        "steps": 20000,
+        "batch": 48,
+        "real_per_batch": 8,
+        "extra_dir": "outputs/coco_augmented",
+        "extra_per_batch": 16,
+        "post_augment_prob": 0.0,
+        "lr": 0.0001,
+        "encoder": "wm:pixelseal",
+        "val_fold": 0,
+        "eval_every": 1000,
+        "no_compile": false,
+        "seed": 1
+      },
+      "fold0_miou": 0.595938352119266,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.49220257927389705
+    },
+    "trustmark": {
+      "source": "segmenter",
+      "encoder": "resnet50",
+      "checkpoint": "outputs/jureca_ckpt/outputs/heavy1/trustmark_resnet50/best.pt",
+      "sha256": "e5d6e9088d54bdb6c049ea1207183924fd331eba9203199dce6c87fad02c3375",
+      "train_args": {
+        "method": "trustmark",
+        "data": "release",
+        "out": "outputs/heavy1/trustmark_resnet50",
+        "coco": ".downloads/coco/val2017",
+        "ann": ".downloads/coco/annotations/instances_val2017.json",
+        "pool": 3000,
+        "steps": 20000,
+        "batch": 48,
+        "real_per_batch": 8,
+        "extra_dir": "outputs/coco_augmented",
+        "extra_per_batch": 16,
+        "post_augment_prob": 0.0,
+        "lr": 0.0004,
+        "encoder": "resnet50",
+        "val_fold": 0,
+        "eval_every": 1000,
+        "no_compile": false,
+        "seed": 0
+      },
+      "fold0_miou": 0.6319509285317667,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.5001583323759191
+    },
+    "stegastamp": {
+      "source": "segmenter",
+      "encoder": "resnet50",
+      "checkpoint": "outputs/jureca_ckpt/outputs/heavy1/stegastamp_resnet50/best.pt",
+      "sha256": "4dec06d6c15c1b24b51c94ddc410ed5f8ceea8a9647a51b7bf39fe619acbd9dd",
+      "train_args": {
+        "method": "stegastamp",
+        "data": "release",
+        "out": "outputs/heavy1/stegastamp_resnet50",
+        "coco": ".downloads/coco/val2017",
+        "ann": ".downloads/coco/annotations/instances_val2017.json",
+        "pool": 3000,
+        "steps": 20000,
+        "batch": 48,
+        "real_per_batch": 8,
+        "extra_dir": "outputs/coco_augmented",
+        "extra_per_batch": 16,
+        "post_augment_prob": 0.0,
+        "lr": 0.0004,
+        "encoder": "resnet50",
+        "val_fold": 0,
+        "eval_every": 1000,
+        "no_compile": false,
+        "seed": 0
+      },
+      "fold0_miou": 0.8239190380172681,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.48583445829503674
+    }
+  },
+  "file": {
+    "path": "outputs/submissions/sub03_single.pt",
+    "images": 1020,
+    "bytes": 16734645,
+    "watermarked_fraction": 0.4927317798137665,
+    "sha256": "0c8d76b69f650611b99d67df06e87f6d412f930beef1c6ce14ed2a378cca2ee5"
+  },
+  "fold0_miou_mean": 0.683936106222767
+}

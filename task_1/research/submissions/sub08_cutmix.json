@@ -1,0 +1,186 @@
+{
+  "name": "sub08_cutmix",
+  "created_utc": "2026-11-22T03:26:09Z",
+  "commit": "930a722746438e26ac5d8602bb3ab52797ec9974",
+  "builder": "research.build_sub_v2",
+  "oof_mean": 0.7273,
+  "methods": {
+    "pixelseal": {
+      "members": [
+        "h1_wm_s1",
+        "h1_wm",
+        "j_wm_s1",
+        "f1_wm",
+        "k2_wm",
+        "k3_wm",
+        "k4_wm",
+        "cm0_wm",
+        "cm1_wm",
+        "cm2_wm",
+        "cm3_wm",
+        "cm4_wm"
+      ],
+      "member_folds": {
+        "h1_wm_s1": 0,
+        "h1_wm": 0,
+        "j_wm_s1": 0,
+        "f1_wm": 1,
+        "k2_wm": 2,
+        "k3_wm": 3,
+        "k4_wm": 4,
+        "cm0_wm": 0,
+        "cm1_wm": 1,
+        "cm2_wm": 2,
+        "cm3_wm": 3,
+        "cm4_wm": 4
+      },
+      "oof_miou": 0.6594,
+      "oof_images": 170,
+      "oof_per_fold": {
+        "0": 0.6383,
+        "1": 0.6593,
+        "2": 0.6581,
+        "3": 0.6815,
+        "4": 0.6601
+      },
+      "rect_replaced_train": 14,
+      "rect_rule": {
+        "path": "outputs/rect/pixelseal.json",
+        "tau": 0.85,
+        "agree": 0.5
+      },
+      "rect_replaced_test": 31,
+      "test_watermarked_fraction": 0.5044
+    },
+    "trustmark": {
+      "members": [
+        "h1_r50",
+        "v2_r50",
+        "j_wm",
+        "f1_wm",
+        "f1_r50",
+        "f2cut_wm",
+        "k2_resnet50",
+        "k2_wm",
+        "k3_resnet50",
+        "k3_wm",
+        "k4_resnet50",
+        "k4_wm",
+        "cm0_wm",
+        "cm1_wm",
+        "cm2_wm",
+        "cm3_wm",
+        "cm4_wm",
+        "cm0_resnet50",
+        "cm1_resnet50",
+        "cm2_resnet50",
+        "cm3_resnet50",
+        "cm4_resnet50"
+      ],
+      "member_folds": {
+        "h1_r50": 0,
+        "v2_r50": 0,
+        "j_wm": 0,
+        "f1_wm": 1,
+        "f1_r50": 1,
+        "f2cut_wm": 2,
+        "k2_resnet50": 2,
+        "k2_wm": 2,
+        "k3_resnet50": 3,
+        "k3_wm": 3,
+        "k4_resnet50": 4,
+        "k4_wm": 4,
+        "cm0_wm": 0,
+        "cm1_wm": 1,
+        "cm2_wm": 2,
+        "cm3_wm": 3,
+        "cm4_wm": 4,
+        "cm0_resnet50": 0,
+        "cm1_resnet50": 1,
+        "cm2_resnet50": 2,
+        "cm3_resnet50": 3,
+        "cm4_resnet50": 4
+      },
+      "oof_miou": 0.7013,
+      "oof_images": 170,
+      "oof_per_fold": {
+        "0": 0.7263,
+        "1": 0.7029,
+        "2": 0.7057,
+        "3": 0.7051,
+        "4": 0.6666
+      },
+      "rect_replaced_train": 18,
+      "rect_rule": {
+        "path": "outputs/rect/trustmark.json",
+        "tau": 0.99,
+        "agree": 0.5
+      },
+      "rect_replaced_test": 30,
+      "test_watermarked_fraction": 0.5006
+    },
+    "stegastamp": {
+      "members": [
+        "h1_r50",
+        "v2_r34",
+        "f1_r50",
+        "k2_resnet50",
+        "k3_resnet50",
+        "k4_resnet50",
+        "cm0_resnet50",
+        "cm1_resnet50",
+        "cm2_resnet50",
+        "cm3_resnet50",
+        "cm4_resnet50"
+      ],
+      "member_folds": {
+        "h1_r50": 0,
+        "v2_r34": 0,
+        "f1_r50": 1,
+        "k2_resnet50": 2,
+        "k3_resnet50": 3,
+        "k4_resnet50": 4,
+        "cm0_resnet50": 0,
+        "cm1_resnet50": 1,
+        "cm2_resnet50": 2,
+        "cm3_resnet50": 3,
+        "cm4_resnet50": 4
+      },
+      "oof_miou": 0.8212,
+      "oof_images": 170,
+      "oof_per_fold": {
+        "0": 0.8483,
+        "1": 0.817,
+        "2": 0.8347,
+        "3": 0.7946,
+        "4": 0.8112
+      },
+      "rect_replaced_train": 0,
+      "rect_rule": null,
+      "rect_replaced_test": 0,
+      "test_watermarked_fraction": 0.4868
+    }
+  },
+  "file": {
+    "path": "outputs/submissions/sub08_cutmix.pt",
+    "images": 1020,
+    "bytes": 16734645,
+    "watermarked_fraction": 0.497270405292511,
+    "sha256": "f56deb31652ea667f6d8eeb186a22931bdbcd917ce9607eb94ba23cdf1a60fb8"
+  },
+  "leaderboard": {
+    "submission_id": 2895,
+    "public_score": 0.7244,
+    "response": {
+      "submission_id": 2895,
+      "status": "success",
+      "score": 0.7244,
+      "previous_best": 0.7152,
+      "delta": 0.0092,
+      "improved": true,
+      "message": "New best on this task. Score shown is on the public split; the final ranking uses the held out subset, revealed after submissions close."
+    },
+    "task": "34-watermark-localisation-image",
+    "submitted_utc": "2026-11-22T03:27:45Z"
+  }
+}

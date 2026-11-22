@@ -1,0 +1,146 @@
+{
+  "name": "sub07_folds",
+  "created_utc": "2026-11-22T02:58:40Z",
+  "commit": "930a722746438e26ac5d8602bb3ab52797ec9974",
+  "builder": "research.build_sub_v2",
+  "oof_mean": 0.7141,
+  "methods": {
+    "pixelseal": {
+      "members": [
+        "h1_wm_s1",
+        "h1_wm",
+        "j_wm_s1",
+        "f1_wm",
+        "k2_wm",
+        "k3_wm",
+        "k4_wm"
+      ],
+      "member_folds": {
+        "h1_wm_s1": 0,
+        "h1_wm": 0,
+        "j_wm_s1": 0,
+        "f1_wm": 1,
+        "k2_wm": 2,
+        "k3_wm": 3,
+        "k4_wm": 4
+      },
+      "oof_miou": 0.6458,
+      "oof_images": 170,
+      "oof_per_fold": {
+        "0": 0.6297,
+        "1": 0.6423,
+        "2": 0.6405,
+        "3": 0.6627,
+        "4": 0.6538
+      },
+      "rect_replaced_train": 14,
+      "rect_rule": {
+        "path": "outputs/rect/pixelseal.json",
+        "tau": 0.85,
+        "agree": 0.5
+      },
+      "rect_replaced_test": 30,
+      "test_watermarked_fraction": 0.5035
+    },
+    "trustmark": {
+      "members": [
+        "h1_r50",
+        "v2_r50",
+        "j_wm",
+        "f1_wm",
+        "f1_r50",
+        "f2cut_wm",
+        "k2_resnet50",
+        "k2_wm",
+        "k3_resnet50",
+        "k3_wm",
+        "k4_resnet50",
+        "k4_wm"
+      ],
+      "member_folds": {
+        "h1_r50": 0,
+        "v2_r50": 0,
+        "j_wm": 0,
+        "f1_wm": 1,
+        "f1_r50": 1,
+        "f2cut_wm": 2,
+        "k2_resnet50": 2,
+        "k2_wm": 2,
+        "k3_resnet50": 3,
+        "k3_wm": 3,
+        "k4_resnet50": 4,
+        "k4_wm": 4
+      },
+      "oof_miou": 0.6904,
+      "oof_images": 170,
+      "oof_per_fold": {
+        "0": 0.7123,
+        "1": 0.6875,
+        "2": 0.6997,
+        "3": 0.6957,
+        "4": 0.6568
+      },
+      "rect_replaced_train": 18,
+      "rect_rule": {
+        "path": "outputs/rect/trustmark.json",
+        "tau": 0.99,
+        "agree": 0.5
+      },
+      "rect_replaced_test": 30,
+      "test_watermarked_fraction": 0.4973
+    },
+    "stegastamp": {
+      "members": [
+        "h1_r50",
+        "v2_r34",
+        "f1_r50",
+        "k2_resnet50",
+        "k3_resnet50",
+        "k4_resnet50"
+      ],
+      "member_folds": {
+        "h1_r50": 0,
+        "v2_r34": 0,
+        "f1_r50": 1,
+        "k2_resnet50": 2,
+        "k3_resnet50": 3,
+        "k4_resnet50": 4
+      },
+      "oof_miou": 0.806,
+      "oof_images": 170,
+      "oof_per_fold": {
+        "0": 0.8291,
+        "1": 0.8002,
+        "2": 0.83,
+        "3": 0.7761,
+        "4": 0.7944
+      },
+      "rect_replaced_train": 0,
+      "rect_rule": null,
+      "rect_replaced_test": 0,
+      "test_watermarked_fraction": 0.4859
+    }
+  },
+  "file": {
+    "path": "outputs/submissions/sub07_folds.pt",
+    "images": 1020,
+    "bytes": 16734640,
+    "watermarked_fraction": 0.49554988741874695,
+    "sha256": "b3b0ea420e31c1a62bf8771013176fdb1a33e6f1e1c9ae5dd6b41089c9f1339b"
+  },
+  "leaderboard": {
+    "submission_id": 2808,
+    "public_score": 0.7152,
+    "response": {
+      "submission_id": 2808,
+      "status": "success",
+      "score": 0.7152,
+      "previous_best": 0.7131,
+      "delta": 0.0021,
+      "improved": true,
+      "message": "New best on this task. Score shown is on the public split; the final ranking uses the held out subset, revealed after submissions close."
+    },
+    "task": "34-watermark-localisation-image",
+    "submitted_utc": "2026-11-22T03:02:51Z"
+  }
+}

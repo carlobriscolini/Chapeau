@@ -1,0 +1,63 @@
+{
+  "pixelseal": {
+    "threshold": 0.798828125,
+    "oof_polarity_accuracy": 0.9588235294117647,
+    "oof_miou": 0.4476228601792279,
+    "test_marked_background_share": 0.5176470588235295,
+    "test_bit_acc_histogram_0_to_1": [
+      0,
+      0,
+      0,
+      1,
+      60,
+      88,
+      9,
+      6,
+      12,
+      164
+    ]
+  },
+  "trustmark": {
+    "threshold": 0.7799999713897705,
+    "oof_polarity_accuracy": 0.9764705882352941,
+    "oof_miou": 0.44851666618795955,
+    "test_marked_background_share": 0.5058823529411764,
+    "test_bit_acc_histogram_0_to_1": [
+      0,
+      0,
+      0,
+      6,
+      55,
+      84,
+      14,
+      14,
+      17,
+      150
+    ]
+  },
+  "stegastamp": {
+    "threshold": 0.7549999952316284,
+    "oof_polarity_accuracy": 0.9823529411764705,
+    "oof_miou": 0.457391357421875,
+    "test_marked_background_share": 0.5147058823529411,
+    "test_bit_acc_histogram_0_to_1": [
+      0,
+      0,
+      0,
+      1,
+      54,
+      86,
+      17,
+      16,
+      11,
+      155
+    ]
+  },
+  "submission": {
+    "path": "outputs/submissions/polarity_fill.pt",
+    "images": 1020,
+    "bytes": 16734650,
+    "watermarked_fraction": 0.5127450823783875
+  },
+  "oof_miou_all": 0.4511769612630208
+}

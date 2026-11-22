@@ -1,0 +1,138 @@
+{
+  "name": "sub06_rect_tm_ps",
+  "created_utc": "2026-11-21T22:55:27Z",
+  "commit": "930a722746438e26ac5d8602bb3ab52797ec9974",
+  "base": "sub04_folds ensemble from outputs/cache (float16 logits)",
+  "methods": {
+    "pixelseal": {
+      "ensemble": [
+        "h1_wm_s1",
+        "h1_wm",
+        "j_wm_s1",
+        "f1_wm"
+      ],
+      "rect_rule": {
+        "paths": "outputs/rect/pixelseal.json",
+        "tau": 0.85,
+        "agree": 0.5
+      },
+      "replaced": 31,
+      "replaced_names": [
+        "e88ed16e9b04",
+        "00d826f78a43",
+        "f4e644ca567f",
+        "fa2ce1649f8b",
+        "93a848afe738",
+        "965198d06735",
+        "18363525921b",
+        "6a69d13d8f5c",
+        "5a0d641c046d",
+        "47f7b4f0d0fc",
+        "4c5753052837",
+        "6070a4791ed9",
+        "ae065ccbcabd",
+        "ed6765e2c11e",
+        "79b8ef86e542",
+        "1a3897893833",
+        "99e239546101",
+        "fdc86fcb50d6",
+        "0cab28b28c0f",
+        "f1e62ae683b2",
+        "7b385efd90ca",
+        "13ee300e28f4",
+        "22bef4e614bb",
+        "1a39344688aa",
+        "27f216e1f7fc",
+        "dd0b2de11d3d",
+        "2384585455c7",
+        "baee16b11e11",
+        "3672cfdecafc",
+        "e698aed7afc3",
+        "07baecff19b0"
+      ],
+      "test_watermarked_fraction": 0.5033188763786764
+    },
+    "trustmark": {
+      "ensemble": [
+        "h1_r50",
+        "v2_r50",
+        "j_wm",
+        "f1_wm",
+        "f1_r50",
+        "f2cut_wm"
+      ],
+      "rect_rule": {
+        "paths": "outputs/rect/trustmark.json",
+        "tau": 0.99,
+        "agree": 0.5
+      },
+      "replaced": 30,
+      "replaced_names": [
+        "df7856d9b79a",
+        "2856fdc36b06",
+        "811e45e6e2df",
+        "314e000b0bc0",
+        "2a4173980ee3",
+        "ffc00b1bdd3e",
+        "e8800224f466",
+        "a4dffce02e5c",
+        "751e483b1db7",
+        "eef9fa6544ba",
+        "7964710fd492",
+        "a85ae331e6fd",
+        "07c6a7793827",
+        "1b5b94409ae7",
+        "3639d3673a54",
+        "c967dd6cdfc3",
+        "ea26258542f1",
+        "dae4ca55cc06",
+        "ea088b20e8af",
+        "03525600c0e2",
+        "b5512d3b6c2d",
+        "a2819225d97a",
+        "31edd8e2dddb",
+        "5c62771889d8",
+        "af2221a05a4d",
+        "f8188d902f5a",
+        "d24b95d28678",
+        "71b0520b7fa3",
+        "4a9ea2082906",
+        "b32e21008d02"
+      ],
+      "test_watermarked_fraction": 0.4948337330537684
+    },
+    "stegastamp": {
+      "ensemble": [
+        "h1_r50",
+        "v2_r34",
+        "f1_r50"
+      ],
+      "rect_rule": null,
+      "replaced": 0,
+      "replaced_names": [],
+      "test_watermarked_fraction": 0.4847015380859375
+    }
+  },
+  "file": {
+    "path": "outputs/submissions/sub06_rect_tm_ps.pt",
+    "images": 1020,
+    "bytes": 16734665,
+    "watermarked_fraction": 0.4942847192287445,
+    "sha256": "8f4f4a496c49b9777c84e1c48793826888d12f427cadbc7e532167b33bbc6718"
+  },
+  "leaderboard": {
+    "submission_id": 2041,
+    "public_score": 0.7131,
+    "response": {
+      "submission_id": 2041,
+      "status": "success",
+      "score": 0.7131,
+      "previous_best": 0.7046,
+      "delta": 0.0085,
+      "improved": true,
+      "message": "New best on this task. Score shown is on the public split; the final ranking uses the held out subset, revealed after submissions close."
+    },
+    "task": "34-watermark-localisation-image",
+    "submitted_utc": "2026-11-21T23:07:23Z"
+  }
+}

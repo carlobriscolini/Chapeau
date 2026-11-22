@@ -1,0 +1,65 @@
+{
+  "name": "sub01_seg_v1",
+  "created_utc": "2026-11-21T16:45:06Z",
+  "commit": "7c63618ff57a30bdfc475579b0b53c67d672933a",
+  "code_dirty": false,
+  "methods": {
+    "pixelseal": {
+      "source": "polarity_fill",
+      "bit_accuracy_threshold": 0.798828125,
+      "fold0_miou": 0.44055893841911764,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.5176470588235295
+    },
+    "trustmark": {
+      "source": "segmenter",
+      "encoder": "resnet34",
+      "checkpoint": "outputs/seg_v1/trustmark/best.pt",
+      "sha256": "96866f564bdad630631c50a3d379829634eafe5d0c5b54b80c48581c72f18e48",
+      "train_args": {
+        "method": "trustmark",
+        "data": "release",
+        "out": "outputs/seg_v1/trustmark",
+        "coco": ".downloads/coco/val2017",
+        "ann": ".downloads/coco/annotations/instances_val2017.json",
+        "pool": 1500,
+        "steps": 4000,
+        "batch": 24,
+        "real_per_batch": 6,
+        "lr": 0.0004,
+        "encoder": "resnet34",
+        "val_fold": 0,
+        "eval_every": 500,
+        "no_compile": false,
+        "seed": 0
+      },
+      "fold0_miou": 0.5524362281878793,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.4690679213579963
+    },
+    "stegastamp": {
+      "source": "segmenter",
+      "encoder": "resnet34",
+      "checkpoint": "outputs/seg_v1/stegastamp/best.pt",
+      "sha256": "fb05307dc236596c93f76c4a1ed8fffa707600880e053103c229c8dec0b1c526",
+      "fold0_miou": 0.7476315890025506,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.46820930032169117
+    }
+  },
+  "file": {
+    "path": "outputs/submissions/sub01_seg_v1.pt",
+    "images": 1020,
+    "bytes": 16734645,
+    "watermarked_fraction": 0.48497477173805237,
+    "sha256": "48d1f0ff8d4b132153b45bf69cac32fb8ff4a05a91d90b7ab2aa123851e92f05"
+  },
+  "fold0_miou_mean": 0.5802089185365159,
+  "leaderboard": {
+    "submission_id": 1138,
+    "public_score": 0.5731,
+    "submitted_utc": "2026-11-21T16:47:53Z",
+    "task": "34-watermark-localisation-image",
+    "note": "public split only; held-out subset decides the final ranking"
+  }
+}

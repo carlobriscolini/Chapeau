@@ -1,0 +1,42 @@
+{
+  "name": "sub13_tf_sam_rect",
+  "created_utc": "2026-11-22T08:28:15Z",
+  "builder": "logits13 (sub10 members + tf x2) + rect rule + SAM refine tau0.7 (PS,TM) + max-evidence rectangle bet (minority<0.5%)",
+  "oof_mean_expected": 0.748,
+  "methods": {
+    "pixelseal": {
+      "source": "logits13 + rect rule + SAM refine A tau0.7",
+      "rect_bets_applied": 66
+    },
+    "trustmark": {
+      "source": "logits13 + rect rule + SAM refine A tau0.7",
+      "rect_bets_applied": 22
+    },
+    "stegastamp": {
+      "source": "logits13 (no SAM refine)",
+      "rect_bets_applied": 31
+    }
+  },
+  "file": {
+    "path": "outputs/submissions/sub13_tf_sam_rect.pt",
+    "images": 1020,
+    "bytes": 16734670,
+    "watermarked_fraction": 0.4964165687561035,
+    "sha256": "31cbdd6af1e39201f6f1d1dda1dd829897924b5a0dd450824f3622db96fbfb0a"
+  },
+  "leaderboard": {
+    "submission_id": 3844,
+    "public_score": 0.7428,
+    "response": {
+      "submission_id": 3844,
+      "status": "success",
+      "score": 0.7428,
+      "previous_best": 0.7374,
+      "delta": 0.0054,
+      "improved": true,
+      "message": "New best on this task. Score shown is on the public split; the final ranking uses the held out subset, revealed after submissions close."
+    },
+    "task": "34-watermark-localisation-image",
+    "submitted_utc": "2026-11-22T08:29:12Z"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "name": "sub05_rect_tm",
+  "created_utc": "2026-11-21T22:54:44Z",
+  "commit": "930a722746438e26ac5d8602bb3ab52797ec9974",
+  "base": "sub04_folds ensemble from outputs/cache (float16 logits)",
+  "methods": {
+    "pixelseal": {
+      "ensemble": [
+        "h1_wm_s1",
+        "h1_wm",
+        "j_wm_s1",
+        "f1_wm"
+      ],
+      "rect_rule": null,
+      "replaced": 0,
+      "replaced_names": [],
+      "test_watermarked_fraction": 0.49288330078125
+    },
+    "trustmark": {
+      "ensemble": [
+        "h1_r50",
+        "v2_r50",
+        "j_wm",
+        "f1_wm",
+        "f1_r50",
+        "f2cut_wm"
+      ],
+      "rect_rule": {
+        "paths": "outputs/rect/trustmark.json",
+        "tau": 0.99,
+        "agree": 0.5
+      },
+      "replaced": 30,
+      "replaced_names": [
+        "df7856d9b79a",
+        "2856fdc36b06",
+        "811e45e6e2df",
+        "314e000b0bc0",
+        "2a4173980ee3",
+        "ffc00b1bdd3e",
+        "e8800224f466",
+        "a4dffce02e5c",
+        "751e483b1db7",
+        "eef9fa6544ba",
+        "7964710fd492",
+        "a85ae331e6fd",
+        "07c6a7793827",
+        "1b5b94409ae7",
+        "3639d3673a54",
+        "c967dd6cdfc3",
+        "ea26258542f1",
+        "dae4ca55cc06",
+        "ea088b20e8af",
+        "03525600c0e2",
+        "b5512d3b6c2d",
+        "a2819225d97a",
+        "31edd8e2dddb",
+        "5c62771889d8",
+        "af2221a05a4d",
+        "f8188d902f5a",
+        "d24b95d28678",
+        "71b0520b7fa3",
+        "4a9ea2082906",
+        "b32e21008d02"
+      ],
+      "test_watermarked_fraction": 0.4948337330537684
+    },
+    "stegastamp": {
+      "ensemble": [
+        "h1_r50",
+        "v2_r34",
+        "f1_r50"
+      ],
+      "rect_rule": null,
+      "replaced": 0,
+      "replaced_names": [],
+      "test_watermarked_fraction": 0.4847015380859375
+    }
+  },
+  "file": {
+    "path": "outputs/submissions/sub05_rect_tm.pt",
+    "images": 1020,
+    "bytes": 16734650,
+    "watermarked_fraction": 0.4908061921596527,
+    "sha256": "7fa10fc5e315a38972b354f254dc9da7c79155278011caa4fb38bd36fadd4c53"
+  },
+  "leaderboard": {
+    "submission_id": 2016,
+    "public_score": 0.7046,
+    "response": {
+      "submission_id": 2016,
+      "status": "success",
+      "score": 0.7046,
+      "previous_best": 0.6929,
+      "delta": 0.0116,
+      "improved": true,
+      "message": "New best on this task. Score shown is on the public split; the final ranking uses the held out subset, revealed after submissions close."
+    },
+    "task": "34-watermark-localisation-image",
+    "submitted_utc": "2026-11-21T22:56:37Z"
+  }
+}

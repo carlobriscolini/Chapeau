@@ -1,0 +1,44 @@
+{
+  "name": "sub15",
+  "created_utc": "2026-11-22T10:01:16Z",
+  "builder": "research.assemble",
+  "logits": "outputs/logits_sub15",
+  "sam": "outputs/sam_sub15",
+  "note": "FAMILY=tf tg th ti tj W=1",
+  "methods": {
+    "pixelseal": {
+      "source": "rect rule + SAM refine A tau0.7",
+      "rect_bets_applied": 63
+    },
+    "trustmark": {
+      "source": "rect rule + SAM refine A tau0.7",
+      "rect_bets_applied": 22
+    },
+    "stegastamp": {
+      "source": "logits > 0",
+      "rect_bets_applied": 31
+    }
+  },
+  "file": {
+    "path": "outputs/submissions/sub15.pt",
+    "images": 1020,
+    "bytes": 16734546,
+    "watermarked_fraction": 0.496001660823822,
+    "sha256": "14577a2670b3146f91559685588b8e311cc39a54e737da4aa15facf5957e5f60"
+  },
+  "leaderboard": {
+    "submission_id": 4093,
+    "public_score": 0.7444,
+    "response": {
+      "submission_id": 4093,
+      "status": "success",
+      "score": 0.7444,
+      "previous_best": 0.7431,
+      "delta": 0.0013,
+      "improved": true,
+      "message": "New best on this task. Score shown is on the public split; the final ranking uses the held out subset, revealed after submissions close."
+    },
+    "task": "34-watermark-localisation-image",
+    "submitted_utc": "2026-11-22T10:03:02Z"
+  }
+}

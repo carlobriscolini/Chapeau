@@ -1,0 +1,240 @@
+{
+  "name": "sub04_repro",
+  "created_utc": "2026-11-21T21:48:05Z",
+  "commit": "930a722746438e26ac5d8602bb3ab52797ec9974",
+  "code_dirty": false,
+  "methods": {
+    "pixelseal": {
+      "source": "segmenter_ensemble",
+      "members": [
+        {
+          "encoder": "wm:pixelseal",
+          "checkpoint": "outputs/jureca_ckpt/outputs/heavy1/pixelseal_wm_s1/best.pt",
+          "sha256": "5c9ab8f5e3835b71d0882469ca6d1005f6d607a6891e05d89413a52093be3698",
+          "train_args": {
+            "method": "pixelseal",
+            "data": "release",
+            "out": "outputs/heavy1/pixelseal_wm_s1",
+            "coco": ".downloads/coco/val2017",
+            "ann": ".downloads/coco/annotations/instances_val2017.json",
+            "pool": 3000,
+            "steps": 20000,
+            "batch": 48,
+            "real_per_batch": 8,
+            "extra_dir": "outputs/coco_augmented",
+            "extra_per_batch": 16,
+            "post_augment_prob": 0.0,
+            "lr": 0.0001,
+            "encoder": "wm:pixelseal",
+            "val_fold": 0,
+            "eval_every": 1000,
+            "no_compile": false,
+            "seed": 1
+          }
+        },
+        {
+          "encoder": "wm:pixelseal",
+          "checkpoint": "outputs/jureca_ckpt/outputs/heavy1/pixelseal_wm/best.pt",
+          "sha256": "130cea107aa3611a4c0f0db26ea4144671e295d5d788702de85dfcea2d367c54",
+          "train_args": {
+            "method": "pixelseal",
+            "data": "release",
+            "out": "outputs/heavy1/pixelseal_wm",
+            "coco": ".downloads/coco/val2017",
+            "ann": ".downloads/coco/annotations/instances_val2017.json",
+            "pool": 3000,
+            "steps": 20000,
+            "batch": 48,
+            "real_per_batch": 8,
+            "extra_dir": "outputs/coco_augmented",
+            "extra_per_batch": 16,
+            "post_augment_prob": 0.0,
+            "lr": 0.0001,
+            "encoder": "wm:pixelseal",
+            "val_fold": 0,
+            "eval_every": 1000,
+            "no_compile": false,
+            "seed": 0
+          }
+        },
+        {
+          "encoder": "wm:pixelseal",
+          "checkpoint": "outputs/jureca_ckpt/outputs/wm_jureca_15901844/pixelseal_wm_s1/best.pt",
+          "sha256": "3175a2011abdf76650977537732da1d02df892756e6b30b280166ab034a51094"
+        },
+        {
+          "encoder": "wm:pixelseal",
+          "checkpoint": "outputs/jureca_ckpt/outputs/heavy_f1/pixelseal_wm/best.pt",
+          "sha256": "18e5e27944b7ae050e9cd02f5edf5c1d0049724ff5d83e3a9cc724dcb8c19f85"
+        }
+      ],
+      "fold0_miou": 0.7579245471162777,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.4928836598115809
+    },
+    "trustmark": {
+      "source": "segmenter_ensemble",
+      "members": [
+        {
+          "encoder": "resnet50",
+          "checkpoint": "outputs/jureca_ckpt/outputs/heavy1/trustmark_resnet50/best.pt",
+          "sha256": "e5d6e9088d54bdb6c049ea1207183924fd331eba9203199dce6c87fad02c3375",
+          "train_args": {
+            "method": "trustmark",
+            "data": "release",
+            "out": "outputs/heavy1/trustmark_resnet50",
+            "coco": ".downloads/coco/val2017",
+            "ann": ".downloads/coco/annotations/instances_val2017.json",
+            "pool": 3000,
+            "steps": 20000,
+            "batch": 48,
+            "real_per_batch": 8,
+            "extra_dir": "outputs/coco_augmented",
+            "extra_per_batch": 16,
+            "post_augment_prob": 0.0,
+            "lr": 0.0004,
+            "encoder": "resnet50",
+            "val_fold": 0,
+            "eval_every": 1000,
+            "no_compile": false,
+            "seed": 0
+          }
+        },
+        {
+          "encoder": "resnet50",
+          "checkpoint": "outputs/jureca_ckpt/outputs/seg_v2_jureca/trustmark_resnet50/best.pt",
+          "sha256": "3670e87dd306c93c8288ea4b080713d158ff002248fe3cb57b057b459e55a6ce"
+        },
+        {
+          "encoder": "wm:trustmark",
+          "checkpoint": "outputs/jureca_ckpt/outputs/wm_jureca_15901844/trustmark_wm/best.pt",
+          "sha256": "ad8650bcc4c406ab713b76144ed3f6acaa36df3228e03b88126954bd573ddbaf",
+          "train_args": {
+            "method": "trustmark",
+            "data": "release",
+            "out": "outputs/wm_jureca_15901844/trustmark_wm",
+            "coco": ".downloads/coco/val2017",
+            "ann": ".downloads/coco/annotations/instances_val2017.json",
+            "pool": 3000,
+            "steps": 12000,
+            "batch": 48,
+            "real_per_batch": 8,
+            "extra_dir": "outputs/coco_augmented",
+            "extra_per_batch": 16,
+            "post_augment_prob": 0.0,
+            "lr": 0.0002,
+            "encoder": "wm:trustmark",
+            "val_fold": 0,
+            "eval_every": 1000,
+            "no_compile": false,
+            "seed": 0
+          }
+        },
+        {
+          "encoder": "wm:trustmark",
+          "checkpoint": "outputs/jureca_ckpt/outputs/heavy_f1/trustmark_wm/best.pt",
+          "sha256": "64535c26c167db46c224dc14fbb56a4a49099fee22a1b112404a51674306b1d8",
+          "train_args": {
+            "method": "trustmark",
+            "data": "release",
+            "out": "outputs/heavy_f1/trustmark_wm",
+            "coco": ".downloads/coco/val2017",
+            "ann": ".downloads/coco/annotations/instances_val2017.json",
+            "pool": 3000,
+            "steps": 20000,
+            "batch": 48,
+            "real_per_batch": 8,
+            "extra_dir": "outputs/coco_augmented",
+            "extra_per_batch": 16,
+            "post_augment_prob": 0.0,
+            "lr": 0.0002,
+            "encoder": "wm:trustmark",
+            "val_fold": 1,
+            "eval_every": 1000,
+            "no_compile": false,
+            "seed": 0
+          }
+        },
+        {
+          "encoder": "resnet50",
+          "checkpoint": "outputs/jureca_ckpt/outputs/heavy_f1/trustmark_resnet50/best.pt",
+          "sha256": "1953275c764829a42b649d58d822a5c4989459c747bb8e772b65b14285ad2090"
+        },
+        {
+          "encoder": "wm:trustmark",
+          "checkpoint": "outputs/jureca_ckpt/outputs/heavy_f2_cut/trustmark_wm/best.pt",
+          "sha256": "a6f0df15ba76d77b2ebddff423a204ac367e70daee8bcc74ecbc1f2d7f37f798"
+        }
+      ],
+      "fold0_miou": 0.96614576377363,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.49071493709788605
+    },
+    "stegastamp": {
+      "source": "segmenter_ensemble",
+      "members": [
+        {
+          "encoder": "resnet50",
+          "checkpoint": "outputs/jureca_ckpt/outputs/heavy1/stegastamp_resnet50/best.pt",
+          "sha256": "4dec06d6c15c1b24b51c94ddc410ed5f8ceea8a9647a51b7bf39fe619acbd9dd",
+          "train_args": {
+            "method": "stegastamp",
+            "data": "release",
+            "out": "outputs/heavy1/stegastamp_resnet50",
+            "coco": ".downloads/coco/val2017",
+            "ann": ".downloads/coco/annotations/instances_val2017.json",
+            "pool": 3000,
+            "steps": 20000,
+            "batch": 48,
+            "real_per_batch": 8,
+            "extra_dir": "outputs/coco_augmented",
+            "extra_per_batch": 16,
+            "post_augment_prob": 0.0,
+            "lr": 0.0004,
+            "encoder": "resnet50",
+            "val_fold": 0,
+            "eval_every": 1000,
+            "no_compile": false,
+            "seed": 0
+          }
+        },
+        {
+          "encoder": "resnet34",
+          "checkpoint": "outputs/jureca_ckpt/outputs/seg_v2_jureca/stegastamp/best.pt",
+          "sha256": "725b9bf2d45712403d122a8e5d293755cebafd41204688472a0e494a46960ed5"
+        },
+        {
+          "encoder": "resnet50",
+          "checkpoint": "outputs/jureca_ckpt/outputs/heavy_f1/stegastamp_resnet50/best.pt",
+          "sha256": "bc86aa6fadc60376b4be69460cb1f0d418f67a474af7e07efcfac0b2eccf72f1"
+        }
+      ],
+      "fold0_miou": 0.9306772674857975,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.4847049488740809
+    }
+  },
+  "file": {
+    "path": "outputs/submissions/sub04_repro.pt",
+    "images": 1020,
+    "bytes": 16734640,
+    "watermarked_fraction": 0.48943451046943665,
+    "sha256": "ba3e8482522eb1caa669d5ae64c93485bad8fcbd31e9cca46efd339a97c29bfb"
+  },
+  "fold0_miou_mean": 0.8849158594585683,
+  "leaderboard": {
+    "submission_id": 1853,
+    "public_score": 0.6928,
+    "response": {
+      "submission_id": 1853,
+      "status": "success",
+      "score": 0.6928,
+      "previous_best": 0.6929,
+      "delta": -0.0001,
+      "improved": false,
+      "message": "Submission accepted. Your previous best on this task still leads. Public-split score; final ranking uses the held out subset."
+    },
+    "task": "34-watermark-localisation-image",
+    "submitted_utc": "2026-11-21T21:57:01Z"
+  }
+}

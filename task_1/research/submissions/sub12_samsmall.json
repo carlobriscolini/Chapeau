@@ -1,0 +1,39 @@
+{
+  "name": "sub12_samsmall",
+  "created_utc": "2026-11-22T07:36:13Z",
+  "builder": "sub11_sam + research.sam_small theta 0 (single-class images get the best-evidence SAM object)",
+  "oof_mean_expected": 0.7442,
+  "methods": {
+    "pixelseal": {
+      "rescued_test_images": 52
+    },
+    "trustmark": {
+      "rescued_test_images": 66
+    },
+    "stegastamp": {
+      "rescued_test_images": 18
+    }
+  },
+  "file": {
+    "path": "outputs/submissions/sub12_samsmall.pt",
+    "images": 1020,
+    "bytes": 16734655,
+    "watermarked_fraction": 0.49656611680984497,
+    "sha256": "6669f7da09734af2e513ef8382dff9e9e88dd85dcdee34ea534297399305dbf4"
+  },
+  "leaderboard": {
+    "submission_id": 3686,
+    "public_score": 0.7374,
+    "response": {
+      "submission_id": 3686,
+      "status": "success",
+      "score": 0.7374,
+      "previous_best": 0.737,
+      "delta": 0.0004,
+      "improved": true,
+      "message": "New best on this task. Score shown is on the public split; the final ranking uses the held out subset, revealed after submissions close."
+    },
+    "task": "34-watermark-localisation-image",
+    "submitted_utc": "2026-11-22T07:36:51Z"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "sub02_jureca",
+  "created_utc": "2026-11-21T17:09:41Z",
+  "commit": "1b925dd126b880dbbe9ee3762fdca8d5dfd7594f",
+  "code_dirty": true,
+  "methods": {
+    "pixelseal": {
+      "source": "segmenter",
+      "encoder": "wm:pixelseal",
+      "checkpoint": "outputs/jureca_ckpt/outputs/wm_jureca_15901844/pixelseal_wm_s1/best.pt",
+      "sha256": "3175a2011abdf76650977537732da1d02df892756e6b30b280166ab034a51094",
+      "fold0_miou": 0.5936618261126547,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.4866289924172794
+    },
+    "trustmark": {
+      "source": "segmenter",
+      "encoder": "resnet50",
+      "checkpoint": "outputs/jureca_ckpt/outputs/seg_v2_jureca/trustmark_resnet50/best.pt",
+      "sha256": "3670e87dd306c93c8288ea4b080713d158ff002248fe3cb57b057b459e55a6ce",
+      "fold0_miou": 0.6211838247780153,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.49148541618795955
+    },
+    "stegastamp": {
+      "source": "segmenter",
+      "encoder": "resnet34",
+      "checkpoint": "outputs/jureca_ckpt/outputs/seg_v2_jureca/stegastamp/best.pt",
+      "sha256": "725b9bf2d45712403d122a8e5d293755cebafd41204688472a0e494a46960ed5",
+      "fold0_miou": 0.7788953298233325,
+      "fold0_images": 34,
+      "test_watermarked_fraction": 0.47226813821231617
+    }
+  },
+  "file": {
+    "path": "outputs/submissions/sub02_jureca.pt",
+    "images": 1020,
+    "bytes": 16734645,
+    "watermarked_fraction": 0.48346084356307983,
+    "sha256": "60daea290d1fc7a61bfc57831418080b49f83b551f82caadf514ca56486a6c2f"
+  },
+  "fold0_miou_mean": 0.6645803269046675,
+  "leaderboard": {
+    "submission_id": 1233,
+    "public_score": 0.6502,
+    "response": {
+      "submission_id": 1233,
+      "status": "success",
+      "score": 0.6502,
+      "previous_best": 0.5731,
+      "delta": 0.077,
+      "improved": true,
+      "message": "New best on this task. Score shown is on the public split; the final ranking uses the held out subset, revealed after submissions close."
+    },
+    "task": "34-watermark-localisation-image",
+    "submitted_utc": "2026-11-21T17:40:19Z"
+  }
+}
